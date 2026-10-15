@@ -1,0 +1,634 @@
+
+/* ========================================
+   1. GENERAL STYLING
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #101010;
+    color: #eeeeee;
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    padding: 90px 8%;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #612c59;
+    margin-bottom: 25px;
+}
+
+section p {
+    color: #8e8bf1;
+}
+
+/* Reusable section introduction */
+
+.section-intro {
+    max-width: 750px;
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   2. NAVIGATION BAR
+======================================== */
+
+header {
+    width: 100%;
+    background-color: #171717;
+    border-bottom: 1px solid #d6c2e4;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    min-height: 75px;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    color: #282e6d;
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #8150a7;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #80c6eb;
+}
+
+
+/* ========================================
+   3. HOME / HERO SECTION
+======================================== */
+
+#home {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    background:
+        radial-gradient(
+            circle at top right,
+            #29251f 0%,
+            #101010 45%
+        );
+}
+
+.hero-content {
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Name and two pictures in one row */
+
+.hero-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.hero-name h1 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    color: #2b2257;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Two pictures side by side */
+
+.hero-pictures {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.hero-pictures img {
+    width: 110px;
+    height: 140px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    border: 1px solid #655a4b;
+    transition: transform 0.3s ease;
+}
+
+.hero-pictures img:hover {
+    transform: translateY(-5px);
+}
+
+.hero-subtitle {
+    color: #63a7e3;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #5a4d8f;
+    font-size: 1.05rem;
+}
+
+/* Hero buttons */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 1px solid #1d2f54;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #c5a880;
+    color: #101010;
+}
+
+.btn-primary:hover {
+    background-color: #e0c49d;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    color: #c5a880;
+    background-color: transparent;
+}
+
+.btn-secondary:hover {
+    background-color: #c5a880;
+    color: #101010;
+}
+
+
+/* ========================================
+   4. ABOUT ME
+======================================== */
+
+#about {
+    background-color: #2a2a2f;
+}
+
+.about-content {
+    max-width: 900px;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+}
+
+
+/* ========================================
+   5. TECHNOLOGY SECTION
+======================================== */
+
+#technology {
+    background-color: #27222d;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background-color: #362942;
+    border: 1px solid #303030;
+    border-radius: 10px;
+    padding: 28px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: #e113b8;
+}
+
+.card h3 {
+    color: #c5a880;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.card ul {
+    padding-left: 20px;
+    color: #c5c5c5;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   6. ART AND CREATIVITY
+======================================== */
+
+#art {
+    background-color: #21191d;
+}
+
+.art-content {
+    max-width: 900px;
+}
+
+.art-content p {
+    margin-bottom: 18px;
+}
+
+.art-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.art-gallery img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #303030;
+    transition: transform 0.3s ease;
+}
+
+.art-gallery img:hover {
+    transform: scale(1.02);
+}
+
+.art-caption {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+
+/* ========================================
+   7. EXPERIENCE
+======================================== */
+
+#experience {
+    background-color: #101010;
+}
+
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.experience-item {
+    padding: 25px;
+    background-color: #191919;
+    border-left: 3px solid #c5a880;
+    border-radius: 5px;
+}
+
+.experience-item h3 {
+    color: #c5a880;
+    margin-bottom: 10px;
+}
+
+.experience-item p {
+    margin-bottom: 12px;
+}
+
+.experience-item ul {
+    padding-left: 22px;
+    color: #c5c5c5;
+}
+
+.experience-item li {
+    margin-bottom: 7px;
+}
+
+
+/* ========================================
+   8. ACHIEVEMENTS AND CERTIFICATES
+======================================== */
+
+#achievements {
+    background-color: #151515;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.achievement-card {
+    padding: 25px;
+    background-color: #191919;
+    border: 1px solid #303030;
+    border-radius: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.achievement-card:hover {
+    border-color: #c5a880;
+}
+
+.achievement-card h3 {
+    color: #c5a880;
+    margin-bottom: 12px;
+}
+
+.achievement-card p {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
+
+.certificate-link {
+    display: inline-block;
+    color: #c5a880;
+    border-bottom: 1px solid #c5a880;
+    padding-bottom: 3px;
+    transition: color 0.3s ease;
+}
+
+.certificate-link:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   9. CONTACT SECTION
+======================================== */
+
+#contact {
+    background-color: #101010;
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-content p {
+    margin-bottom: 20px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.contact-links a {
+    color: #c5a880;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contact-links a:hover {
+    border-bottom-color: #c5a880;
+}
+
+
+/* ========================================
+   10. FOOTER
+======================================== */
+
+footer {
+    background-color: #171717;
+    border-top: 1px solid #303030;
+    padding: 25px 8%;
+    text-align: center;
+}
+
+footer p {
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #c5a880;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+
+/* ========================================
+   11. RESPONSIVE DESIGN - TABLETS
+======================================== */
+
+@media (max-width: 900px) {
+    section {
+        padding: 70px 6%;
+    }
+
+    .navbar {
+        padding-left: 6%;
+        padding-right: 6%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+
+    .card-container,
+    .achievement-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .art-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ========================================
+   12. RESPONSIVE DESIGN - PHONES
+======================================== */
+
+@media (max-width: 600px) {
+    section {
+        padding: 55px 6%;
+    }
+
+    section h2 {
+        font-size: 1.7rem;
+    }
+
+    .navbar {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav-links {
+        gap: 10px 15px;
+    }
+
+    .nav-links a {
+        font-size: 0.82rem;
+    }
+
+    #home {
+        min-height: auto;
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    /* Stack the name above the pictures on phones */
+
+    .hero-name {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .hero-name h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-pictures {
+        gap: 10px;
+    }
+
+    .hero-pictures img {
+        width: 95px;
+        height: 120px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.05rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        text-align: center;
+    }
+
+    .card-container,
+    .achievement-grid,
+    .art-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    .art-gallery img {
+        height: 240px;
+    }
+
+    .experience-item {
+        padding: 20px;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    footer {
+        padding: 22px 5%;
+    }
+}
+
+
+/* ========================================
+   13. ACCESSIBILITY
+======================================== */
+
+a:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid #c5a880;
+    outline-offset: 4px;
+}
+
+::selection {
+    background-color: #c5a880;
+    color: #101010;
+}
